@@ -7,13 +7,17 @@ const menuItems = [
 	title: 'Home',
 	id: 'home'
 }, {
-	address: 'list',
+	address: '/tasks/list',
 	title: 'List',
 	id: 'list'
 }, {
-	address: 'tabs',
+	address: '/tasks/tabs',
 	title: 'Tabs',
 	id: 'tabs'
+}, {
+	address: '/tasks/modal',
+	title: 'Modal',
+	id: 'modal'
 }];
 
 

@@ -12,7 +12,7 @@ class TabsPage extends React.Component {
 		return (
 			<div className="jumbotron">
 				<h4>This is tabs page</h4>
-				<Tabs tabs={tabs}></Tabs>
+				<Tabs tabs={tabs} selectedTab="tab-name2" id="id1"></Tabs>
 			</div>
 		);
 	}

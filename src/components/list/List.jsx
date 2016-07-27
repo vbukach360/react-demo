@@ -1,16 +1,18 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes } from 'react';
 import ListItem from './ListItem.jsx';
 
-const ingredients = [{ id: 1, text: 'tomato' } , { id: 2, text: 'potato'}];
+const List = (props) => {
+	let listItems = props.ingredients.map((item) => {
+		return <ListItem key={item.id} ingredient={item.text} />;
+	});
 
-class List extends React.Component {
-	render() {
-		let listItems = ingredients.map((item) => {
-			return <ListItem key={item.id} ingredient={item.text} />;
-		});
-
-		return (<ul>{listItems}</ul>);
-	}
+	return (
+			<ul>{listItems}</ul>
+	);
 }
+
+List.propTypes = {
+	ingredients: PropTypes.array.isRequired
+};
 
 export default List;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const ListItem = (props) => {
 	return (
@@ -7,5 +7,9 @@ const ListItem = (props) => {
 			</li>
 	);
 }
+
+ListItem.propTypes = {
+	ingredient: PropTypes.string.isRequired
+};
 
 export default ListItem;

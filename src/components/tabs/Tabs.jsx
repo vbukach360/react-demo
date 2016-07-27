@@ -1,11 +1,7 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import TabMenu from './TabMenu.jsx';
 import TabContent from './TabContent.jsx';
-
-import $ from 'jquery'
-
-$.fn.tab = require('semantic-ui-tab');
 
 class Tabs extends React.Component {
 	constructor(props) {
@@ -15,21 +11,30 @@ class Tabs extends React.Component {
 	render () {
 		let contentItems = this.props.tabs.map((item) => {
 			return (
-				<TabContent key={item.id} tabId={item.id} content={item.content}></TabContent>
+				<TabContent key={item.id} id={item.id} content={item.content}></TabContent>
 			);
 		});
 
 		return (
-			<div>
-				<TabMenu tabs={this.props.tabs} />
+			<div id={this.props.id}>
+				<TabMenu tabs={this.props.tabs} id={this.props.id} />
 				{contentItems}
 			</div>
 		);
 	}
 
 	componentDidMount () {
-		$('.tabular.menu .item').tab();
+		$('#' + this.props.id + ' .tabular.menu .item').tab();
+		$('#' + this.props.id + ' .tab[data-tab="' + this.props.selectedTab+ '"]').addClass('active');
+		$('#' + this.props.id + ' .item[data-tab="' + this.props.selectedTab + '"]').addClass('active');
 	}
 }
+
+
+Tabs.propTypes = {
+	tabs: PropTypes.array.isRequired,
+	selectedTab: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired
+};
 
 export default Tabs;

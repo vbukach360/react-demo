@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import MenuItem from './MenuItem.jsx';
 
 const Menu = (props) => {
@@ -8,5 +8,9 @@ const Menu = (props) => {
 
 	return (<div>{menuItems}</div>);
 }
+
+Menu.propTypes = {
+	items: PropTypes.array.isRequired
+};
 
 export default Menu;
