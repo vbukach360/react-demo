@@ -18,6 +18,10 @@ const menuItems = [
 	address: '/tasks/modal',
 	title: 'Modal',
 	id: 'modal'
+}, {
+	address: '/tasks/loader',
+	title: 'Loader',
+	id: 'loader'
 }];
 
 

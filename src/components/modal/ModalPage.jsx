@@ -1,30 +1,24 @@
 import React, { PropTypes } from 'react';
 import Modal from './Modal.jsx';
 
-class ModalPage extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+const ModalPage = () => {
+	const modalData = {
+		header: 'Hello World',
+		content: 'This is modal page',
+		id: 'randomId'
+	};
 
-	render() {
-		const modalData = {
-			header: 'Hello World',
-			content: 'This is modal page',
-			id: 'randomId'
-		};
-
-		return (
-			<div className="jumbotron">
-				<h4>This is Modal page</h4>
-				<input value="Show modal dialog" type="button" className="btn btn-danger" onClick={this.showModal.bind(this, modalData)} />
-				<Modal header={modalData.header} content={modalData.content} id={modalData.id} /> 
-			</div>
-		);
-	}
-
-	showModal (modalData) {
+	const showModal = () => {
 		$('#' + modalData.id).modal('show');
-	}
-}
+	};
+
+	return (
+		<div className="jumbotron">
+			<h4>This is Modal page</h4>
+			<input value="Show modal dialog" type="button" className="btn btn-danger" onClick={showModal} />
+			<Modal header={modalData.header} content={modalData.content} id={modalData.id} /> 
+		</div>
+	);
+};
 
 export default ModalPage;
