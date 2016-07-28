@@ -13,6 +13,7 @@ class TabsPage extends React.Component {
 			<div className="jumbotron">
 				<h4>This is tabs page</h4>
 				<Tabs tabs={tabs} selectedTab="tab-name2" id="id1"></Tabs>
+				<Tabs tabs={tabs} selectedTab="tab-name2" id="id2"></Tabs>
 			</div>
 		);
 	}

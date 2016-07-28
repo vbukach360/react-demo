@@ -4,7 +4,7 @@ import TabMenuItem from './TabMenuItem.jsx';
 const TabMenu = (props) => {
 	let items = props.tabs.map((item) => {
 		return (
-				<TabMenuItem key={item.id} id={item.id} title={item.title}></TabMenuItem>
+				<TabMenuItem key={item.id} name={props.parentId + '_' + item.id} title={item.title}></TabMenuItem>
 			);
 	});
 
@@ -16,7 +16,8 @@ const TabMenu = (props) => {
 }
 
 TabMenu.propTypes = {
-	tabs: PropTypes.array.isRequired
+	tabs: PropTypes.array.isRequired,
+	parentId: PropTypes.string.isRequired
 };
 
 export default TabMenu;
