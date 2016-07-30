@@ -3,13 +3,13 @@ import React, { PropTypes } from 'react';
 const ModalContent = (props) => {
 	return (
 		<div className="content">
-			{props.content}
+			{props.children}
 		</div>
 	);
 }
 
 ModalContent.propTypes = {
-	content: PropTypes.string.isRequired
+	children: PropTypes.element.isRequired
 };
 
 export default ModalContent;

@@ -9,6 +9,9 @@ class LoaderPage extends React.Component {
 			isActive: true,
 			loadingText: 'Hello world'
 		};
+
+		this.changeLoadingText = this.changeLoadingText.bind(this);
+		this.toggleLoaderState = this.toggleLoaderState.bind(this);
 	}
 
 	toggleLoaderState () {
@@ -27,8 +30,8 @@ class LoaderPage extends React.Component {
 		return (
 			<div className="jumbotron">
 				<h4>This is loader page</h4>
-				<input value={this.state.loadingText} type="text" onChange={this.changeLoadingText.bind(this)} ref="message" />
-				<input value="Toggle Loader" type="button" onClick={this.toggleLoaderState.bind(this)} />
+				<input value={this.state.loadingText} type="text" onChange={this.changeLoadingText} ref="message" />
+				<input value="Toggle Loader" type="button" onClick={this.toggleLoaderState} />
 				<Loader isActive={this.state.isActive} loadingText={this.state.loadingText} ></Loader>
 			</div>
 		);

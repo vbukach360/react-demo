@@ -2,12 +2,14 @@ import React, { PropTypes } from 'react';
 
 const ModalHeader = (props) => {
 	return (
-		 <div className="header">{props.content}</div>
+		<div className="header">
+			{props.children}
+		</div>
 	);
 }
 
 ModalHeader.propTypes = {
-	content: PropTypes.string.isRequired
+	children: PropTypes.element.isRequired
 };
 
 export default ModalHeader;
