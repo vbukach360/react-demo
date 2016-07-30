@@ -3,7 +3,6 @@ import React, { PropTypes } from 'react';
 const Modal = (props) => {
 	return (
 			<div className="ui modal" id={props.id} >
-				<i className="close icon"></i>
 				{props.children}
 			</div>
 	);
@@ -11,7 +10,7 @@ const Modal = (props) => {
 
 Modal.propTypes = {
 	id: PropTypes.string.isRequired,
-	children: PropTypes.element.isRequired
+	children: PropTypes.array.isRequired
 };
 
 export default Modal;

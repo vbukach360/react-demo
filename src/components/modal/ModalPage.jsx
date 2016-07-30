@@ -13,14 +13,14 @@ const ModalPage = () => {
 				type: 'approve',
 				text: 'Approve', 
 				clickHandler: () => {
-					alert(10);
+					console.log('hello from approve');
 				}
 			}, 
 			{
 				type: 'cancel',
 				text: 'Cancel',
 				clickHandler: () => {
-						alert(10);
+					console.log('hello from cancel');
 				}
 			}
 		]
@@ -35,6 +35,7 @@ const ModalPage = () => {
 			<h4>This is Modal page</h4>
 			<input value="Show modal dialog" type="button" className="btn btn-danger" onClick={showModal} />
 			<Modal id={ modalData.id } >
+				<i className="close icon"></i>
 				<ModalHeader>
 					<h2>Hello World</h2>
 				</ModalHeader>
