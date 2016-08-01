@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 
 const Loader = (props) => {
-	let classes = 'ui dimmer' +  (props.isActive ? ' active' : '');
+	const classes = 'ui dimmer' +  (props.isActive ? ' active' : '');
 	return (
 			<div className="ui segment">
 				<div className={classes}>

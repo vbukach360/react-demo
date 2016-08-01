@@ -13,14 +13,14 @@ const ModalPage = () => {
 				type: 'approve',
 				text: 'Approve', 
 				clickHandler: () => {
-					console.log('hello from approve');
+
 				}
 			}, 
 			{
 				type: 'cancel',
 				text: 'Cancel',
 				clickHandler: () => {
-					console.log('hello from cancel');
+
 				}
 			}
 		]

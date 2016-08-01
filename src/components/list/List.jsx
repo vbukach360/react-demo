@@ -2,7 +2,7 @@ import React, {Component, PropTypes } from 'react';
 import ListItem from './ListItem.jsx';
 
 const List = (props) => {
-	let listItems = props.ingredients.map((item) => {
+	const listItems = props.ingredients.map((item) => {
 		return <ListItem key={item.id} ingredient={item.text} />;
 	});
 

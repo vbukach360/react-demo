@@ -6,9 +6,9 @@ require.extensions['.css'] = function () {return null;};
 require.extensions['.png'] = function () {return null;};
 require.extensions['.jpg'] = function () {return null;};
 
-let jsdom = require('jsdom').jsdom;
+const jsdom = require('jsdom').jsdom;
 
-let exposedProperties = ['window', 'navigator', 'document'];
+const exposedProperties = ['window', 'navigator', 'document'];
 
 global.document = jsdom('');
 global.window = document.defaultView;
@@ -23,4 +23,4 @@ global.navigator = {
   userAgent: 'node.js'
 };
 
-let documentRef = document;  //eslint-disable-line no-undef
+const documentRef = document;  //eslint-disable-line no-undef

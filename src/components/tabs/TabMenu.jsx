@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import TabMenuItem from './TabMenuItem.jsx';
 
 const TabMenu = (props) => {
-	let items = props.tabs.map((item) => {
+	const items = props.tabs.map((item) => {
 		return (
 				<TabMenuItem  handleTabClick={props.handleTabClick} key={item.id} name={item.id} title={item.title} activeTab={props.activeTab} />
 			);
