@@ -22,6 +22,10 @@ const menuItems = [
 	address: '/tasks/loader',
 	title: 'Loader',
 	id: 'loader'
+}, {
+	address: '/tasks/todo',
+	title: 'Todo',
+	id: 'todo'
 }];
 
 

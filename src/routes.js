@@ -8,6 +8,7 @@ import ListPage from './components/list/ListPage.jsx';
 import TabsPage from './components/tabs/TabsPage.jsx';
 import ModalPage from './components/modal/ModalPage.jsx';
 import LoaderPage from './components/loader/LoaderPage.jsx';
+import TodoPage from './components/todo/TodoPage.jsx';
 
 export default (
 	<Route path="/" component={App}>
@@ -16,5 +17,6 @@ export default (
 		<Route path="tasks/tabs" component={TabsPage} />
 		<Route path="tasks/modal" component={ModalPage} />
 		<Route path="tasks/loader" component={LoaderPage} />
+		<Route path="tasks/todo" component={TodoPage} />
 	</Route>
 );

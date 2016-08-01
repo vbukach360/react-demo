@@ -19,6 +19,8 @@ class Tabs extends React.Component {
 	}
 
 	render () {
+		console.log('render is called');
+
 		let contentItems = this.props.tabs.map((item) => {
 			const isActive = item.id == this.state.activeTab;
 
